@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+  int n,n1=0;
+  
+  printf("Enter any number:");
+  scanf("%d",&n);
+  
+  if(n==0)
+       n1=1;
+  
+  while(n>0)
+   {
+      int  rem=n%10;
+       
+       if(rem==0)
+          rem=1;
+          
+        n=n/10;
+        n1=n1*10+rem;
+   }
+
+   n=0;
+   
+   while(n1>0)
+   {
+       int r=n1%10;
+       
+       n=n*10+r;
+       n1/=10;
+   }
+   
+   printf("Your convert number is :%d",n);
+    return 0;
+}
